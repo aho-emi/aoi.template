@@ -1,16 +1,25 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@ahoemi/aoi.premade",
+  "version": "1.0.1",
+  "description": "An unofficial aoi.js extension for extra functions and premade commands",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "aoi.js",
+    "aoi",
+    "aoijs",
+    "extension",
+    "function",
+    "plugin"
+  ],
+  "author": "ahoemi",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
+    "aoi.js": "^6.4.0",
+    "aoi.parser": "^1.2.6",
     "node-fetch": "^3.2.6"
   }
 }
