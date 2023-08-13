@@ -4,3 +4,4 @@ database/
 .upm
 .config
 replit.nix
+.gitignore
