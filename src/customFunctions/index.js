@@ -61,9 +61,9 @@ class Premade {
       
   // Load the functions
   const path = require("path");
-  const FuncHandler = require(__dirname, "..", "handler.js");
+  const { Handler } = require(__dirname, "..", "handler.js");
   const customFuncPath = path.join(__dirname, "customFunctionJS");
-  const handler = new FuncHandler(bot);
+  const handler = new Handler(bot);
   handler.loadFunctions(customFuncPath);
 
     }
