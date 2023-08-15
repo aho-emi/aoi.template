@@ -10,6 +10,8 @@ class Mod {
     load() {
         const bot = this.args;
 
+        bot.variables(require('./variable.js'))
+
         // Load the functions
         const path = require("path");
         const { Handler } = require(path.join(__dirname, "..", "handler.js"));
