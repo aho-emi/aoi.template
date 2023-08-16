@@ -72,6 +72,40 @@ class Handler {
       }
     }
   }
+
+  
+  loadMusicCommands(typ, path) {
+    const validTypes = Object.getOwnPropertyNames(typ.cmds)
+
+    const cmds = [];
+    readdirSync(path+'/').map(x => !x.endsWith('.js') ? readdirSync(path+'/' + x).forEach(y => cmds.push(path+'/' + x + '/' + y)) : cmds.push(path+'/' + x));
+
+    let startTime = Date.now();
+
+    for (let cmd of cmds) {
+      let c;
+      try {
+        c = require(cmd);
+      } catch (e) {
+        console.log(e);
+        continue;
+      }
+      if (!c) return msg.push("");
+      c = Array.isArray(c) ? c : [c];
+      for (let command of c) {
+        if (!("type" in command)) command.type = "default";
+        const valid = validTypes.some((c) => c === command.type);
+
+        if (!valid) return;
+
+        try { typ.cmds.createCommand(command);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+  }
+
 }
 
 module.exports = { Handler };

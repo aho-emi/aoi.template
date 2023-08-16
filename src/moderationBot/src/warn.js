@@ -8,16 +8,16 @@ $description[$username[$get[user]] has been warned.]
 $color[Green]
 
 $setGuildVar[cases;$getObject]
-$addObjectProperty[$toLowercase[$randomString[6]];$get[case]]
+$addObjectProperty[c$toLowercase[$randomString[3]];$nonEscape[$get[case]]]
 $createObject[$getGuildVar[cases]]
 
 $setUserVar[cases;$getObject;$get[user]]
-$addObjectProperty[$toLowercase[$randomString[6]];$get[case]]
+$addObjectProperty[c$toLowercase[$randomString[3]];$nonEscape[$get[case]]]
 $createObject[$getUserVar[cases;$get[user]]]
 
-$let[case;{"moderator": "$authorID", "reason": "$messageSlice[1]", "time": "$dateStamp"}]
+$let[case;{"moderator": "$authorID", "user": "$get[user]", "reason": "$messageSlice[1]", "time": "$dateStamp"}]
 
-$setGuildVar[warn;$math[$getUserVar[warn]+1]]
+$setGuildVar[warn;$math[$getGuildVar[warn]+1]]
 $setUserVar[warn;$math[$getUserVar[warn;$get[user]]+1];$get[user]]
 
 

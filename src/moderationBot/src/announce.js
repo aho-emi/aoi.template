@@ -6,12 +6,7 @@ module.exports ={
 
 
 
-$djsEval[const msg = "$message";
-
-
-const c = msg.match(/\\[(.*?)\\]\\s+\\((.*?)\\)\\s+(.*)/)
-
-msg;true]
+$replaceText[$messageSlice[1];\) \{;|]
   `
   
 }
