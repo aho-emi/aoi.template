@@ -1,5 +1,7 @@
 module.exports = [{
     name: "role",
+    category: "moderation",
+    usage: "{prefix} role remove @user @role",
     code: `
 $sendMessage[{newEmbed:{description:<@&$get[role]> has been removed from <@$get[user]>}{timestamp}{color:Green}{footer:Moderator#COLON# $username:$authorAvatar}}]
     
