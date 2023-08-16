@@ -37,5 +37,5 @@ $let[user;$findMember[$message[2];false]]
     
 $suppressErrors[Something went wrong!]
     
-$onlyIf[$message[1]==$toLowerCase[add];]`
+$onlyIf[$toLowerCase[$message[1]]==$toLowerCase[add];]`
 }]
