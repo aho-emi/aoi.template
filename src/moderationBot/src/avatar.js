@@ -1,6 +1,7 @@
 module.exports = [{
   name: "avatar",
   aliases: "av",
+  description: "This returns the avatar of the specified user.",
   category: "moderation",
   usage: "{prefix}avatar @user",
   code:`

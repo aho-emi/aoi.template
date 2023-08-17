@@ -1,5 +1,6 @@
 module.exports = [{
     name: "role",
+    description: "This will add the specified role to the respective user.",
     category: "moderation",
     usage: "{prefix} role add @user @role",
     code: `

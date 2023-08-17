@@ -1,5 +1,6 @@
 module.exports ={
   name: "cases",
+  description: "This will return the list of warnings that user has.",
   category: "moderation",
   usage: "{prefix}cases (@user:optional)",
   code:`

@@ -1,5 +1,6 @@
 module.exports = {
   name: "unban",
+  description: "This will unban the specified user from the guild.",
   category: "moderation",
   usage: "{prefix}unban id reason",
   code:`

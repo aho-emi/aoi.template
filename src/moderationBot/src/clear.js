@@ -1,5 +1,6 @@
 module.exports = {
   name: "clear",
+  description: "This will delete/purge the messages.",
   aliases: ["purge", "clean"],
   category: "moderation",
   usage: ["{prefix}clear 10", "{prefix}clear 10 @user"],

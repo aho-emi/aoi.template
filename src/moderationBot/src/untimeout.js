@@ -1,5 +1,6 @@
 module.exports = {
   name: "untimeout",
+  description: "This will remove the timeout from the specified user.",
   category: "moderation",
   usage: "{prefix}untimeout @user reason",
   code:`

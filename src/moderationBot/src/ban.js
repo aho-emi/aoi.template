@@ -1,5 +1,6 @@
 module.exports = {
   name: "ban",
+  description: "This will ban the specified user from the guild.",
   category: "moderation",
   usage: "{prefix}ban @user reason",
   code:`

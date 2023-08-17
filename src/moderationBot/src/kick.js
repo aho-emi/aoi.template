@@ -1,5 +1,6 @@
 module.exports = {
   name: "kick",
+  description: "This will kick the specified user from the guild.",
   category: "moderation",
   usage: "{prefix}kick @user reason",
   code:`

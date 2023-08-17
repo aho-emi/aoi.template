@@ -1,5 +1,6 @@
 module.exports = [{
     name: "role",
+    description: "This will remove the specified role from the respective user.",
     category: "moderation",
     usage: "{prefix} role remove @user @role",
     code: `

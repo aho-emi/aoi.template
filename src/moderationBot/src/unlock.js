@@ -1,5 +1,6 @@
 module.exports = {
   name: "unlock",
+  description: "This will unlock the locked channel.",
   category: "moderation",
   usage: "{prefix}unlock #channel",
   code:`
