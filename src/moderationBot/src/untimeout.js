@@ -1,6 +1,6 @@
 module.exports = {
   name: "untimeout",
-  description: "This will remove the timeout from the specified user.",
+  description: "Removes timeout from a user in the guild.",
   category: "moderation",
   usage: "{prefix}untimeout @user reason",
   code:`
