@@ -11,7 +11,7 @@ $description[$if[$get[texts]==;No warns till now#SEMI# clean records;$nonEscape[
 
 
 $let[texts;$djsEval[( async () => { const from = 0;
-const to = 9;
+const to = 9; 
 const user = "$get[user]"
 const data = !user? $getGuildVar[cases] : $getUserVar[cases;$get[user]]
 

@@ -1,5 +1,5 @@
 module.exports = [{
-    name: "role",
+    name: "role add",
     description: "This will add the specified role to the respective user.",
     category: "moderation",
     usage: "{prefix} role add @user @role",
@@ -37,6 +37,5 @@ $let[role;$findRole[$message[3]]]
 $let[user;$findMember[$message[2];false]]
     
 $suppressErrors[Something went wrong!]
-    
-$onlyIf[$toLowerCase[$message[1]]==$toLowerCase[add];]`
+`
 }]

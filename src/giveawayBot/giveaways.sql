@@ -1,1 +1,1 @@
-{"a886476273721950238_1141395379494060102":{"author":"undefined","users":"undefined|715852000096419900","prize":"undefined","winners":"undefined"},"a886476273721950238_1141499181249343620":{"author":"715852000096419900","users":"1122264666282926230","prize":"Anime Girl Figurine","winners":"1"}}
+{}

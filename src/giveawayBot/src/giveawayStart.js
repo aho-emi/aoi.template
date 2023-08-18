@@ -5,15 +5,17 @@ module.exports ={
   usage: "{prefix}giveaway start 12h 3 Merchandise",
   code:`
 
-$setTimeout[giveawayEnd;$message[1];{"channel": "$channelID", "message": "$get[id]", "guild": "$guildID"};false]
+
   
 
 $writeFile[$get[path];$getObject;utf8]
-$addObjectProperty[a$guildID_$get[id];{"author": "$authorID", "users": "$clientID", "prize": "$messageSlice[2]", "winners": "$message[2]"}]
+$addObjectProperty[a$guildID_$get[id];{"author": "$authorID", "users": "$clientID", "prize": "$messageSlice[2]", "winners": "$message[2]", "time": "$truncate[$math[($dateStamp+$parseTime[$message[1]])/1000]]", "url": "$guildID/$channelID/$get[id]", "timeoutId": "$get[timeoutId]"}]
 $createObject[$nonEscape[$get[data]]]
 $let[data;$readFile[$get[path]]]
 $let[path;$djsEval[const path = require('path')
  path.join(__dirname, '..', '..', '..', '..', '..', "src", 'giveawayBot', 'giveaways.sql');true]]
+ 
+ $let[timeoutId;$setTimeout[giveawayEnd;$message[1];{"channel": "$channelID", "message": "$get[id]", "guild": "$guildID"};true]]
 
 
 $let[id;$sendMessage[{newEmbed:{title:$messageSlice[2]}
