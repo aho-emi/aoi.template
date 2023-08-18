@@ -1,6 +1,6 @@
 module.exports = {
   name: "warn",
-  description: "This will add a warn to the specified user.",
+  description: "Warns a user in the guild.",
   category: "moderation",
   usage: "{prefix}warn @user reason",
   code:`

@@ -1,6 +1,6 @@
 module.exports = {
   name: "timeout",
-  description: "This will timeout the specified user till the specified time.",
+  description: "Timesout's a user in the guild.",
   category: "moderation",
   usage: "{prefix}timeout @user 1h reason",
   code:`

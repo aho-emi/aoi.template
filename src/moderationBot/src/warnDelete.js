@@ -1,5 +1,6 @@
 module.exports ={
   name: "case delete",
+  description: "Delets the warns of a user in the guild.",
   category: "moderation",
   usage: "{prefix}case delete #id",
   code:`

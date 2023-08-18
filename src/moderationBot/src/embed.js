@@ -1,6 +1,6 @@
 module.exports ={
   name: "embed",
-  description: "This will create a embed in current channel",
+  description: "Creates an embed and sends it.",
   category: "moderation",
   usage: "{prefix}embed {title:Announcement}{description:This is an announcement}",
   code:`

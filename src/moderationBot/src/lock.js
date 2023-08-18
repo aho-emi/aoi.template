@@ -1,6 +1,6 @@
 module.exports = {
   name: "lock",
-  description: "This will lock the specified channel not allowing people to send messages except those who have permission.",
+  description: "This will lock the specified channel.",
   category: "moderation",
   usage: "{prefix}lock #channel reason",
   code:`

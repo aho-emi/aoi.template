@@ -1,6 +1,6 @@
 module.exports ={
   name: "case view",
-  description: "This will give more information about the specified warning ID.",
+  description: "Gives more information about a specific warning.",
   category: "moderation",
   usage: "{prefix}case view #id",
   code:`
