@@ -16,6 +16,12 @@ class GiveawayBot {
         const commandPath = path.join(__dirname, "src");
         const handler = new Handler(bot);
         handler.loadCommands(commandPath);
+      
+        const fs = require('fs');
+
+        const filename = 'giveaways.sql'; 
+          if (!fs.existsSync(filename)) {
+            fs.writeFileSync(filename, '', 'utf-8')}
     }
 }
 

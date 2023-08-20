@@ -11,10 +11,11 @@ module.exports = [{
   type: "interaction",
   prototype: "button",
   code:`
-  $interactionModal[Giveaway Creation Page;giveawayCreate;{actionRow:{textInput:Prize:1:prizeInput:Prize:true::0:250}}
+  $interactionModal[Giveaway Creation Page;giveawayCreate;
+  {actionRow:{textInput:Channel ID:2:channelInput::false::0:250}}
+  {actionRow:{textInput:Prize:1:prizeInput:Prize:true::0:250}}
   {actionRow:{textInput:Time:1:timeInput:Ex#COLON# 10m:true::0:10}}
   {actionRow:{textInput:Winners:1:winnerInput:Number of winners:true:1:1:10}}
-  {actionRow:{textInput:Sticky Message:2:stickyInput::false::0:250}}
   {actionRow:{textInput:Hoster ID:1:hosterInput:Id of the one who is hosting the giveaway:false:$authorID:0:250}}]
 
 
@@ -30,13 +31,18 @@ module.exports = [{
   prototype: "modal",
   code:`
 
-  $interactionUpdate[**Giveaway Preview**;
+$interactionUpdate[**Giveaway Preview**;
 
-{newEmbed:{color:Aqua}{title:$textInputValue[prizeInput]}{description:Click 🎉 button to participate!\nTime: <t:$truncate[$math[$parseTime[$textInputValu[timeInput]]/1000]]:R>\nEntries: **0**\nWinner(s): Pending!\nHosted by: <@$textInputValue[hosterInput]>}{footer:$textInputValue[winnerInput] winner(s) to be choosen}{timestamp}}
+{newEmbed:{color:Aqua}{title:$textInputValue[prizeInput]}{description:Click 🎉 button to participate!
+Ends: <t:$truncate[$math[($dateStamp+$parseTime[$textInputValue[timeInput]])/1000]]:R>
+Entries: **0**
+Winner(s): Pending!
+Hosted by: <@$textInputValue[hosterInput]>}{footer:$textInputValue[winnerInput] winner(s) to be choosen}{timestamp}}
 
 $nonEscape[$if[$textInputValue[stickyInput]!=;{newEmbed:{title:Sticked Message}{description:$nonEscape[$if[$textInputValue[stickyInput]==;None;$textInputValue[stickyInput]]]}{color:Aqua}}]]
 ;
 {actionRow:{button:Add Requirement:2:requirementAdd.$authorID:false}{button:Start Giveaway:4:giveawaySend:false}}]
+
   
   `
 }] 

@@ -29,8 +29,7 @@ JSON.stringify(s);true]]
 
 $let[data;$readFile[$get[path]]]
   
-$let[path;$djsEval[const path = require('path')
- path.join(__dirname, '..', '..', '..', '..', '..', "src", 'giveawayBot', 'giveaways.sql');true]]
+$let[path;./giveaways.sql]
 
 `
 }

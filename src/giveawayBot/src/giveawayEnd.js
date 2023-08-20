@@ -51,8 +51,7 @@ $createObject[$nonEscape[$get[data]]]
 $let[data;$readFile[$get[path]]]
 
   
-$let[path;$djsEval[const path = require('path')
- path.join(__dirname, '..', '..', '..', '..', '..', "src", 'giveawayBot', 'giveaways.sql');true]]
+$let[path;./giveaways.sql]
   $onlyIf[$stringStartsWith[$get[text];https://discord.com/channels]==true;Error]
 $deleteCommand
 $let[text;$message[1]]
