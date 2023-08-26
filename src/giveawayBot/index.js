@@ -21,7 +21,7 @@ class GiveawayBot {
 
         const filename = 'giveaways.sql'; 
           if (!fs.existsSync(filename)) {
-            fs.writeFileSync(filename, '', 'utf-8')}
+            fs.writeFileSync(filename, '{}', 'utf-8')}
     }
 }
 

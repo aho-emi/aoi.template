@@ -1,4 +1,4 @@
-module.exports = [{
+ module.exports = [{
   name: "giveaway create",
   category: "giveaway",
   usage: "{prefix}giveaway create",
