@@ -5,7 +5,7 @@ module.exports = {
   description: "Gives information about an emoji.",
   code:`
   
-$djsEval[ const emo = '$message[1]'.replace(/\\D/g, '')
+$djsEval[ const emo = '$get[emoji]'.replace('>', '')
 const emoji = client.emojis.cache.get(emo)
 const { EmbedBuilder } = require('discord.js')
 if ( emoji ) { 
@@ -28,6 +28,11 @@ const em = new EmbedBuilder()
 channel.send({ embeds: [em] })
 }
 ;false]
+
+$let[emoji;$advancedTextSplit[$message[1];:;3]]
+
 $onlyIf[$message[1]!=;{newEmbed:{description:Pleas}}]
+
+$suppressErrors[Something went wrong!]
   `
 }
